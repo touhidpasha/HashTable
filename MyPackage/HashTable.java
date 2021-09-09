@@ -89,4 +89,22 @@ public class HashTable<T, T1> {
 			System.out.println("Queue is empty!!!!");
 		}
 	}
+	
+	//deleting word
+	public void delete(T1 data) {
+		current = head;
+		temp = current.next;
+		if (current.data.equals(data)) {
+			head = current.next;
+		}
+		while (temp != null) {
+			if (temp.data.equals(data)) {
+				current.next = temp.next;
+				System.out.println("Deleted '" + temp.data + "'");
+			}
+			temp = temp.next;
+			current = current.next;
+		}
+		print();
+	}
 }

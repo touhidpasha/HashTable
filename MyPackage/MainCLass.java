@@ -14,6 +14,9 @@ public class MainCLass {
 			hash.addNode(count, word);
 		}
 		hash.print();
+		hash.delete("avoidable");
+		System.out.println("\n\n\nafter deleting word\n");
+		hash.print();
 	}
 
 
